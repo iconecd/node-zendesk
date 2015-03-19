@@ -1,5 +1,7 @@
 # node-zendesk
 ---
+
+[![Join the chat at https://gitter.im/blakmatrix/node-zendesk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/blakmatrix/node-zendesk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![build status](https://secure.travis-ci.org/blakmatrix/node-zendesk.png)](http://travis-ci.org/blakmatrix/node-zendesk)
 
 
@@ -55,12 +57,13 @@ var client = zendesk.createClient({
 Below is a list of options you may use when calling any scripts you may have written
 
 ```
--s --subdomain X
--u --username X
--p --password X
--t --token X
--r --remoteUri X
+-s  --subdomain X
+-u  --username X
+-p  --password X
+-t  --token X
+-r  --remoteUri X
 -hc --helpcenter
+-v  --voice
 --debug
 --no-cookies
 --timeout X(ms)
@@ -337,6 +340,7 @@ show(ticketID, cb)
 showMany(ticket_ids, cb)
 create(ticket, cb)
 update(ticketID, ticket, cb)
+merge(ticketID, mergedTicket, cb)
 updateMany(ticket_ids, ticket, cb)
 deleteMany(ticket_ids, cb)
 delete(ticketID, cb)
